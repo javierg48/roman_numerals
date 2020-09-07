@@ -70,9 +70,7 @@ void printRomanNumeral(){
 }
 
 
-int main()
-{   
-
+int main() {   
     cout << "\nEnter a number to see the Roman Numeral value: ";
     cin >> strNumber;
     numLength = strNumber.length();
@@ -82,5 +80,5 @@ int main()
 
     printRomanNumeral();
     cout << endl << endl;
-
+    return 0;
 }
