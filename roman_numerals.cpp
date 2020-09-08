@@ -1,7 +1,7 @@
 // author: Javier Garcia Ramirez
 // create date: Sunday, January 12th, 2020
 // last modified: Saturday, January 18th, 2020
-// filename: 2roman_numerals.cpp
+// filename: roman_numerals.cpp
 // description: receives input from user then outputs the roman numeral value of the input
 // runtime: n/a
 
