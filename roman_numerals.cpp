@@ -22,7 +22,7 @@ string five = "V", fifty = "L", fiveHundred = "D", fiveThousand = "V̅", fiftyTh
 string oneHundredThousand = "C̅", oneMillion = "M̅", tenMillion = "X̿", hundredMillion = "C̿", oneBillion = "M̿";
 
 
-int globalNumberSplit[10]; // 10 is the most amount of digits the user's input can have.
+int globalNumberSplit[100]; // 10 is the most amount of digits the user's input can have.
 
 string leadingOneList[10] = {one, ten, hundred, thousand, tenThousand, 
 oneHundredThousand, oneMillion, tenMillion, hundredMillion, oneBillion};
@@ -61,8 +61,9 @@ void stringToInteger() {
 
 void printRomanNumeral() {
     int placeholder;
-    for (int s = 0; s <= globalStringLength ;s++) {
-        placeholder = globalNumberSplit[adjust]; // adjust makes sure the index is going through each element in globalNumberSplit
+    int index = 0;
+    while (0 <= globalStringLength) {
+        placeholder = globalNumberSplit[index]; // adjust makes sure the index is going through each element in globalNumberSplit
             // prints digit for numbers equal to or smaller than 3.
         switch(placeholder) {
             case 1: case 2: case 3: 
@@ -87,9 +88,9 @@ void printRomanNumeral() {
                 cout << leadingOneList[globalStringLength-1] + leadingOneList[globalStringLength];
                 break;
 	}
-        adjust = adjust + 1;        // in globalNumberSplit, it moves the index to the element on the right 
+        index = index + 1;        // in globalNumberSplit, it moves the index to the element on the right 
         // keeps s the same value of 0 because if we increase s and keep globalStringLength, then printint from leadingOneList or leadingFiveList becomes more difficult.
-        s = s-1;    
         globalStringLength = globalStringLength -1;   // since s is staying the same, we are decreasing globalStringLength to eventually end the for loop
     }
+
 }
